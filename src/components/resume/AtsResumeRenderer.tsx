@@ -708,7 +708,7 @@ export const AtsResumeRenderer: React.FC<AtsResumeRendererProps> = ({
                 <div style={{ fontSize: "10pt", textAlign: "left" }}>
                   {edu.degree}
                   {edu.field ? `, ${edu.field}` : ""}
-                  {edu.gpa ? ` - GPA: ${edu.gpa}` : ""}
+                  {(edu.cgpa || edu.gpa) ? ` - CGPA: ${edu.cgpa || edu.gpa}` : ""}
                 </div>
               </article>
             ))}

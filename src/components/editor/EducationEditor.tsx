@@ -157,12 +157,12 @@ export const EducationEditor: React.FC<EducationEditorProps> = ({ education, onC
               </Grid>
               <Grid item xs={12} sm={3}>
                 <TextField
-                  label="GPA (Optional)"
+                  label="CGPA (Optional)"
                   size="small"
                   fullWidth
-                  placeholder="e.g. 3.85 / 4.0"
-                  value={edu.gpa || ""}
-                  onChange={(e) => handleUpdate(index, { gpa: e.target.value })}
+                  placeholder="e.g. 8.33 / 10"
+                  value={edu.cgpa ?? edu.gpa ?? ""}
+                  onChange={(e) => handleUpdate(index, { cgpa: e.target.value, gpa: e.target.value })}
                 />
               </Grid>
             </Grid>
