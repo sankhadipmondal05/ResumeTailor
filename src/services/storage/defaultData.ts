@@ -6,7 +6,7 @@ export const defaultMasterResume: Resume = {
   type: "master",
   contact: {
     fullName: "Sankhadip Mondal",
-    title: "Full Stack Software Engineer",
+    title: "Senior Full Stack Software Engineer",
     email: "sankhadip.mondal05@gmail.com",
     phone: "9748902965",
     location: "Kolkata, West Bengal, India",
@@ -14,7 +14,7 @@ export const defaultMasterResume: Resume = {
     github: "https://github.com/sankhadipmondal05",
     portfolio: "https://sankhadip-professional-portfolio.vercel.app/"
   },
-  summary: "Results-driven Software Engineer with 6+ years of experience architecting resilient cloud-native web applications and distributed backend systems. Proficient in React, TypeScript, Node.js, and AWS. Proven track record of improving application latency by 35% and scaling enterprise services to support over 2 million active users.",
+  summary: "Frontend Developer and UI/UX Designer skilled in React, JavaScript, Figma, and responsive web development. Experienced in translating designs and references into polished, interactive web interfaces, with a focus on usability, visual quality, animations, testing, and refinement.",
   experience: [
     {
       id: "exp-1",
@@ -27,56 +27,48 @@ export const defaultMasterResume: Resume = {
       bullets: [
         "Architected modular microservices using TypeScript, Node.js, and Docker, reducing API response times by 32% across 15 critical customer workflows.",
         "Engineered real-time collaboration dashboards using React, WebSocket, and Redux Toolkit, serving 450,000+ daily active enterprise users.",
-        "Established CI/CD pipelines via GitHub Actions and AWS ECS, cutting production release turnaround from 4 hours to under 18 minutes.",
-        "Mentored team of 6 junior and mid-level engineers in code review practices, clean architecture, and automated test coverage."
-      ]
-    },
-    {
-      id: "exp-2",
-      company: "Beacon Data Systems",
-      role: "Software Engineer",
-      location: "San Jose, CA",
-      startDate: "Aug 2019",
-      endDate: "Dec 2021",
-      current: false,
-      bullets: [
-        "Developed resilient RESTful and GraphQL APIs with Python FastAPI and PostgreSQL, supporting high-concurrency ingestion of 10M+ events daily.",
-        "Implemented Redis caching layers that decreased database query load by 45% during peak trading intervals.",
-        "Migrated legacy monolithic frontends to modern React and TypeScript with component design systems, improving Lighthouse performance score to 96."
-      ]
-    },
-    {
-      id: "exp-3",
-      company: "Catalyst Interactive",
-      role: "Junior Web Developer",
-      location: "San Francisco, CA",
-      startDate: "Jun 2018",
-      endDate: "Jul 2019",
-      current: false,
-      bullets: [
-        "Built responsive web user interfaces adhering to WCAG 2.1 AA accessibility guidelines using HTML5, CSS3, and JavaScript.",
-        "Collaborated with UX designers to translate wireframes into interactive functional prototypes with automated Jest and Cypress suites."
+        "Established CI/CD pipelines via GitHub Actions and AWS ECS, cutting production release turnaround from 4 hours to under 18 minutes."
       ]
     }
   ],
   projects: [
     {
       id: "proj-1",
-      name: "PulseStream Analytics Platform",
-      url: "github.com/alexmorgan/pulsestream",
-      technologies: ["React", "TypeScript", "Node.js", "Kafka", "PostgreSQL", "Docker"],
+      name: "Origamy - Document Scanner & PDF Application",
+      url: "https://github.com/sankhadipmondal05/Origamy",
+      technologies: [
+        "React 19 • Vite • OpenCV.js • Tesseract.js • Capacitor"
+      ],
       bullets: [
-        "Constructed an open-source real-time event analytics dashboard handling 5,000 requests/sec with sub-second aggregation.",
-        "Packaged complete multi-service deployment with Docker Compose and Kubernetes Helm charts."
+        "Built a cross-platform document-scanning application with 50+ downloads, covering scanning, perspective correction, OCR extraction, and PDF generation.",
+        "Optimized the document-processing workflow, reducing processing friction by 96% through client-side image processing and streamlined UI interactions.",
+        "Developed a responsive mobile-first interface with React and Capacitor, focusing on usability across web and Android environments."
       ]
     },
     {
       id: "proj-2",
-      name: "TaskSync Distributed Engine",
-      url: "github.com/alexmorgan/tasksync",
-      technologies: ["Go", "gRPC", "Redis", "AWS Lambda"],
+      name: "TechVault - Technical Learning Platform",
+      url: "https://techvault-one-blush.vercel.app/",
+      technologies: [
+        "React • TypeScript • Node.js • Express • MongoDB • YouTube IFrame API"
+      ],
       bullets: [
-        "Designed a distributed background task scheduler offering at-least-once delivery semantics and automated failover recovery."
+        "Designed and developed a structured technical learning platform with focused learning paths, that has been used and tested by 25+ users across different devices and learning scenarios.",
+        "Implemented a 92% video-completion tracking threshold using the YouTube IFrame API to monitor learner progress.",
+        "Iteratively refined the interface based on user feedback, improving navigation clarity and overall usability by 98% based on testing results."
+      ]
+    },
+    {
+      id: "proj-mu7uybnn",
+      name: "Wallify - Wallpaper Platform",
+      url: "https://wallify-theta.vercel.app/",
+      technologies: [
+        "React • Vite • CSS • GSAP • JavaScript"
+      ],
+      bullets: [
+        "Designed and developed an immersive wallpaper showcase focused on visual discovery, high-quality presentation, and smooth interactions.",
+        "Built a self-developed animation engine to power custom UI animations, transitions, and interactive visual effects. Optimized animation sequencing and transitions to create a smooth, immersive browsing experience across the interface.",
+        "Reduced visual rendering and interaction overhead by 87% through optimized animation handling and frontend implementation."
       ]
     }
   ],
@@ -88,57 +80,94 @@ export const defaultMasterResume: Resume = {
       field: "Computer Science & Engineering",
       location: "",
       startDate: "",
-      endDate: "2027",
-      gpa: "3.85 / 4.0",
+      endDate: "May 2027",
+      gpa: "8.33",
       details: ""
     }
   ],
   skills: [
     {
       id: "sk-1",
-      name: "Languages",
-      skills: ["TypeScript", "JavaScript (ES6+)", "Python", "Go", "SQL", "HTML5/CSS3"]
+      name: "Frontend Development",
+      skills: [
+        "React",
+        "JavaScript (ES6+)",
+        "HTML5",
+        "CSS",
+        "Tailwind CSS",
+        "Vite",
+        "Responsive Web Design"
+      ]
     },
     {
       id: "sk-2",
-      name: "Frameworks & Libraries",
-      skills: ["React", "Node.js", "Express", "Next.js", "FastAPI", "Redux", "Material UI", "Tailwind CSS"]
+      name: "UI/UX Design",
+      skills: [
+        "Figma",
+        "UI Design",
+        "UX Design",
+        "Wireframing",
+        "Prototyping",
+        "Design Systems",
+        "Relume"
+      ]
     },
     {
       id: "sk-3",
-      name: "Cloud & DevOps",
-      skills: ["AWS (ECS, S3, RDS, Lambda)", "Docker", "Kubernetes", "CI/CD (GitHub Actions)", "Terraform", "Linux"]
+      name: "Testing & Quality",
+      skills: [
+        "Functional Testing",
+        "A/B Testing",
+        "Responsive Testing",
+        "Debugging",
+        "Cross-Browser Testing"
+      ]
+    },
+    {
+      id: "sk-mu7vrhu9",
+      name: "Backend",
+      skills: [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "REST APIs"
+      ]
     },
     {
       id: "sk-4",
       name: "Databases & Tools",
-      skills: ["PostgreSQL", "MongoDB", "Redis", "Git", "REST APIs", "GraphQL", "Jest", "Jira"]
+      skills: [
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Git"
+      ]
     }
   ],
   certifications: [
     {
       id: "cert-1",
-      name: "AWS Certified Solutions Architect – Associate",
-      issuer: "Amazon Web Services",
-      date: "Nov 2023",
-      url: "aws.amazon.com/verification"
+      name: "MERN Stack Development",
+      issuer: "Ardent Computech Pvt. Ltd.",
+      date: "Nov 2025",
+      url: ""
     },
     {
       id: "cert-2",
-      name: "Meta Certified Frontend Developer Professional",
-      issuer: "Meta",
-      date: "Mar 2022",
+      name: "Cloud-Based Full Stack Development with AI & ML Integration",
+      issuer: "Ardent Computech Pvt. Ltd.",
+      date: "Mar 2025",
       url: ""
     }
   ],
   settings: {
     fontFamily: "Inter",
-    fontSize: 10.5,
+    fontSize: 9.5,
     lineHeight: 1.15,
-    margin: 16.5,
-    sectionSpacing: 12,
+    margin: 10,
+    sectionSpacing: 7,
     letterSpacing: 0
   },
-  createdAt: new Date().toISOString(),
+  createdAt: "2026-09-18T13:35:27.366Z",
   updatedAt: new Date().toISOString()
 };

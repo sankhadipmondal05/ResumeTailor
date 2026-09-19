@@ -23,6 +23,17 @@ export const storageService = {
         throw new Error("Invalid schema");
       }
       let changed = false;
+      // Check if existing stored masterResume contains legacy placeholder data (e.g. Alex Morgan or PulseStream)
+      const hasOldPlaceholder =
+        parsed.masterResume.contact?.fullName?.includes("Alex") ||
+        JSON.stringify(parsed.masterResume).includes("PulseStream") ||
+        JSON.stringify(parsed.masterResume).includes("alexmorgan");
+
+      if (hasOldPlaceholder) {
+        parsed.masterResume = JSON.parse(JSON.stringify(defaultMasterResume));
+        changed = true;
+      }
+
       // Ensure masterResume always contains Sankhadip Mondal's contact info
       if (
         parsed.masterResume.contact?.email !== defaultMasterResume.contact.email ||
