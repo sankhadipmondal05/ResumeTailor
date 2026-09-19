@@ -22,7 +22,7 @@ export const defaultMasterResume: Resume = {
       role: "Freelance UI/UX & Frontend Developer",
       location: "Remote",
       startDate: "April 2026",
-      endDate: "",
+      endDate: "May 2026",
       current: true,
       bullets: [
         "Designed wireframes, prototypes, and the frontend for a STEM institute's highly converting enrollment site",
@@ -81,7 +81,7 @@ export const defaultMasterResume: Resume = {
       location: "",
       startDate: "",
       endDate: "May 2027",
-      gpa: "8.33",
+      cgpa: "8.33",
       details: ""
     }
   ],

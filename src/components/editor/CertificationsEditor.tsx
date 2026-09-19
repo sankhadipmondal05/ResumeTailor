@@ -87,8 +87,15 @@ export const CertificationsEditor: React.FC<CertificationsEditorProps> = ({
               bgcolor: "#FDFDFD"
             }}
           >
-            <Grid container spacing={2} alignItems="center">
-              <Grid item xs={12} sm={4}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                alignItems: { xs: "stretch", md: "center" },
+                gap: 2
+              }}
+            >
+              <Box sx={{ flex: 1.2 }}>
                 <TextField
                   label="Certification Name"
                   size="small"
@@ -98,8 +105,8 @@ export const CertificationsEditor: React.FC<CertificationsEditorProps> = ({
                   onChange={(e) => handleUpdate(index, { name: e.target.value })}
                   required
                 />
-              </Grid>
-              <Grid item xs={12} sm={3}>
+              </Box>
+              <Box sx={{ flex: 1 }}>
                 <TextField
                   label="Issuer"
                   size="small"
@@ -109,8 +116,8 @@ export const CertificationsEditor: React.FC<CertificationsEditorProps> = ({
                   onChange={(e) => handleUpdate(index, { issuer: e.target.value })}
                   required
                 />
-              </Grid>
-              <Grid item xs={12} sm={2}>
+              </Box>
+              <Box sx={{ width: { xs: "100%", md: "130px" } }}>
                 <TextField
                   label="Issue Date"
                   size="small"
@@ -119,8 +126,8 @@ export const CertificationsEditor: React.FC<CertificationsEditorProps> = ({
                   value={cert.date || ""}
                   onChange={(e) => handleUpdate(index, { date: e.target.value })}
                 />
-              </Grid>
-              <Grid item xs={12} sm={2}>
+              </Box>
+              <Box sx={{ flex: 1 }}>
                 <TextField
                   label="Verification Link"
                   size="small"
@@ -129,12 +136,13 @@ export const CertificationsEditor: React.FC<CertificationsEditorProps> = ({
                   value={cert.url || ""}
                   onChange={(e) => handleUpdate(index, { url: e.target.value })}
                 />
-              </Grid>
-              <Grid item xs={12} sm={1} sx={{ display: "flex", justifyContent: "flex-end" }}>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", flexShrink: 0, gap: 0.5 }}>
                 <IconButton
                   size="small"
                   disabled={index === 0}
                   onClick={() => handleMove(index, "up")}
+                  title="Move up"
                 >
                   <ArrowUpwardIcon fontSize="small" />
                 </IconButton>
@@ -142,14 +150,15 @@ export const CertificationsEditor: React.FC<CertificationsEditorProps> = ({
                   size="small"
                   disabled={index === certifications.length - 1}
                   onClick={() => handleMove(index, "down")}
+                  title="Move down"
                 >
                   <ArrowDownwardIcon fontSize="small" />
                 </IconButton>
-                <IconButton size="small" color="error" onClick={() => handleDelete(index)}>
+                <IconButton size="small" color="error" onClick={() => handleDelete(index)} title="Delete certification">
                   <DeleteOutlineIcon fontSize="small" />
                 </IconButton>
-              </Grid>
-            </Grid>
+              </Box>
+            </Box>
           </Box>
         ))}
       </CardContent>

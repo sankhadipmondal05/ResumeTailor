@@ -56,6 +56,7 @@ export type Education = {
   startDate?: string;
   endDate?: string;
   gpa?: string;
+  cgpa?: string;
   details?: string;
 };
 

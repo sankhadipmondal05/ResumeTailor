@@ -80,8 +80,15 @@ export const SkillsEditor: React.FC<SkillsEditorProps> = ({ skills, onChange }) 
               bgcolor: "#FDFDFD"
             }}
           >
-            <Grid container spacing={2} alignItems="center">
-              <Grid item xs={12} sm={4}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                alignItems: { xs: "stretch", md: "center" },
+                gap: 2
+              }}
+            >
+              <Box sx={{ width: { xs: "100%", md: "32%" } }}>
                 <TextField
                   label="Category Name"
                   size="small"
@@ -91,8 +98,8 @@ export const SkillsEditor: React.FC<SkillsEditorProps> = ({ skills, onChange }) 
                   onChange={(e) => handleUpdate(index, { name: e.target.value })}
                   required
                 />
-              </Grid>
-              <Grid item xs={12} sm={7}>
+              </Box>
+              <Box sx={{ flex: 1 }}>
                 <TextField
                   label="Skills (Comma-separated)"
                   size="small"
@@ -108,12 +115,13 @@ export const SkillsEditor: React.FC<SkillsEditorProps> = ({ skills, onChange }) 
                     })
                   }
                 />
-              </Grid>
-              <Grid item xs={12} sm={1} sx={{ display: "flex", justifyContent: "flex-end" }}>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", flexShrink: 0, gap: 0.5 }}>
                 <IconButton
                   size="small"
                   disabled={index === 0}
                   onClick={() => handleMove(index, "up")}
+                  title="Move up"
                 >
                   <ArrowUpwardIcon fontSize="small" />
                 </IconButton>
@@ -121,14 +129,15 @@ export const SkillsEditor: React.FC<SkillsEditorProps> = ({ skills, onChange }) 
                   size="small"
                   disabled={index === skills.length - 1}
                   onClick={() => handleMove(index, "down")}
+                  title="Move down"
                 >
                   <ArrowDownwardIcon fontSize="small" />
                 </IconButton>
-                <IconButton size="small" color="error" onClick={() => handleDelete(index)}>
+                <IconButton size="small" color="error" onClick={() => handleDelete(index)} title="Delete category">
                   <DeleteOutlineIcon fontSize="small" />
                 </IconButton>
-              </Grid>
-            </Grid>
+              </Box>
+            </Box>
           </Box>
         ))}
       </CardContent>
