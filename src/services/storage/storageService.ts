@@ -23,7 +23,7 @@ export const storageService = {
         throw new Error("Invalid schema");
       }
       let changed = false;
-      // Check if existing stored masterResume contains legacy placeholder data (e.g. Alex Morgan or PulseStream)
+      // Check if existing stored masterResume contains legacy placeholder data (e.g. Alex Morgan, PulseStream, Apex Cloud Solutions)
       const hasOldPlaceholder =
         parsed.masterResume.contact?.fullName?.includes("Alex") ||
         JSON.stringify(parsed.masterResume).includes("PulseStream") ||
@@ -31,6 +31,18 @@ export const storageService = {
 
       if (hasOldPlaceholder) {
         parsed.masterResume = JSON.parse(JSON.stringify(defaultMasterResume));
+        changed = true;
+      }
+
+      // If experience contains old placeholder "Apex Cloud Solutions", replace experience with defaultMasterResume.experience
+      if (JSON.stringify(parsed.masterResume.experience || []).includes("Apex Cloud Solutions")) {
+        parsed.masterResume.experience = JSON.parse(JSON.stringify(defaultMasterResume.experience));
+        changed = true;
+      }
+
+      // Ensure title is synced if still legacy
+      if (parsed.masterResume.contact?.title === "Senior Full Stack Software Engineer" || !parsed.masterResume.contact?.title) {
+        parsed.masterResume.contact.title = defaultMasterResume.contact.title;
         changed = true;
       }
 
