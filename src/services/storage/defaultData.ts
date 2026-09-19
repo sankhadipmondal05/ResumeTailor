@@ -6,7 +6,7 @@ export const defaultMasterResume: Resume = {
   type: "master",
   contact: {
     fullName: "Sankhadip Mondal",
-    title: "Senior Full Stack Software Engineer",
+    title: "Full Stack Developer",
     email: "sankhadip.mondal05@gmail.com",
     phone: "9748902965",
     location: "Kolkata, West Bengal, India",
@@ -18,16 +18,16 @@ export const defaultMasterResume: Resume = {
   experience: [
     {
       id: "exp-1",
-      company: "Apex Cloud Solutions",
-      role: "Senior Full Stack Engineer",
-      location: "San Francisco, CA",
-      startDate: "Jan 2022",
+      company: "MathPirate",
+      role: "Freelance UI/UX & Frontend Developer",
+      location: "Remote",
+      startDate: "April 2026",
       endDate: "",
       current: true,
       bullets: [
-        "Architected modular microservices using TypeScript, Node.js, and Docker, reducing API response times by 32% across 15 critical customer workflows.",
-        "Engineered real-time collaboration dashboards using React, WebSocket, and Redux Toolkit, serving 450,000+ daily active enterprise users.",
-        "Established CI/CD pipelines via GitHub Actions and AWS ECS, cutting production release turnaround from 4 hours to under 18 minutes."
+        "Designed wireframes, prototypes, and the frontend for a STEM institute's highly converting enrollment site",
+        "Helped the institute sign 25+ new students after launch, increased enrollment by 20%.",
+        "Organized course info into clear tracks so parents self-serve schedules and fees."
       ]
     }
   ],
@@ -149,7 +149,7 @@ export const defaultMasterResume: Resume = {
       id: "cert-1",
       name: "MERN Stack Development",
       issuer: "Ardent Computech Pvt. Ltd.",
-      date: "Nov 2025",
+      date: "Mar 2025",
       url: ""
     },
     {
